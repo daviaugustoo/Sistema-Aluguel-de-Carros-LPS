@@ -12,7 +12,8 @@
 
 ## Diagrama de caso de uso
 ---------------
-![Casos de Uso](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS/blob/main/Documentacao/Diagrama%20de%20caso%20de%20uso/Lab2%20LPS%20Diagrama%20de%20Caso%20de%20uso.png)
+![Casos de Uso](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS/blob/main/Documentacao/Documentos%20Caso%20de%20Uso/Captura%20de%20tela%202025-03-16%20234454.png)
+
 
 ## Diagrama de Classe
 ---------------
