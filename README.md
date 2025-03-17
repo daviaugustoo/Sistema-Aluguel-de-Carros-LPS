@@ -1,4 +1,4 @@
-# Sistema-de-Aluguel-de-Carros-LPS
+# Sistema-Aluguel-de-Carros-LPS
 
 ## Contribuidores
 
@@ -7,7 +7,12 @@
 - [![Victor](https://avatars.githubusercontent.com/u/131902065?s=50 "Victor Lucas Tornelli")](https://github.com/Viihctor) Victor Lucas Tornelli
 
 ## Diagrama de caso de uso
+---------------
+![Casos de Uso](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS\Documentacao\Diagrama%20de%20caso%20de%20uso\Lab2%20LPS%20Diagrama%20de%20Caso%20de%20uso.png)
 
 ## Diagrama de Classe
+---------------
+![Diagrama de Classe](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS\Documentacao\Diagrama%20de%20classe\Lab2%20LPS%20Diagrama%20de%20classe.png)
 
 ## Historia de Usuario
+---------------
