@@ -8,11 +8,11 @@
 
 ## Diagrama de caso de uso
 ---------------
-![Casos de Uso](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS\Documentacao\Diagrama%20de%20caso%20de%20uso\Lab2%20LPS%20Diagrama%20de%20Caso%20de%20uso.png)
+![Casos de Uso](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS/blob/main/Documentacao/Diagrama%20de%20caso%20de%20uso/Lab2%20LPS%20Diagrama%20de%20Caso%20de%20uso.png)
 
 ## Diagrama de Classe
 ---------------
-![Diagrama de Classe](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS\Documentacao\Diagrama%20de%20classe\Lab2%20LPS%20Diagrama%20de%20classe.png)
+![Diagrama de Classe](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS/blob/main/Documentacao/Diagrama%20de%20classe/Lab2%20LPS%20Diagrama%20de%20classe.png)
 
 ## Historia de Usuario
 ---------------
