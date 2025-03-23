@@ -18,3 +18,8 @@
 ## Diagrama de Classe
 ---------------
 ![Diagrama de Classe](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS/blob/main/Documentacao/Diagrama%20de%20classe/Lab2%20LPS%20Diagrama%20de%20classe.png)
+
+
+## Diagrama de Componentes
+---------------
+![Diagrama de Componentes](https://github.com/daviaugustoo/Sistema-Aluguel-de-Carros-LPS/blob/main/Documentacao/Diagrama%20de%20Componentes/Diagrama%20de%20Componentes%20v1.0.png)
