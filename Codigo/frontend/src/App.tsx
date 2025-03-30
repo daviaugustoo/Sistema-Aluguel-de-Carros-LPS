@@ -5,8 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import { Row, Col, Button, ButtonGroup, ToggleButton } from 'react-bootstrap';
 import carro from './imagens/300px-Chick_Hicks.jpeg'
 import bambobi from './imagens/bumbobi.jpg'
-import ListaCarros from './components/ListaCarros';
-import ListaClientes from './components/ListaClientes';
+import ListaCarros from './pages/ListaCarros';
+import ListaClientes from './pages/ListaClientes';
 
 function App() {
 

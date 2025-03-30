@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Row, Col, Container, Table, Button } from "react-bootstrap"
 import { Route, useNavigate } from "react-router";
-import NovoCarro from "./NovoCarro";
+import NovoCarro from "../components/NovoCarro";
 
 
 
@@ -10,7 +10,7 @@ export default function ListaCarros() {
     const [listaDeCarros, setListaDeCarro] = useState<Automovel[]>()
     const [usuario, setUsuario] = useState<Usuario>()
     const [cliente, setCliente] = useState<Cliente>()
-    const navigate = useNavigate()
+    const navegar = useNavigate()
 
     useEffect(() => {
         const user = {
@@ -71,10 +71,16 @@ export default function ListaCarros() {
         }
         setUsuario(usuario)
         setListaDeCarro(carros)
-    })
+    }, [usuario])
 
     function abreNovoCarro() {
         return
+    }
+
+    function editarCarro(id: number) {
+        navegar('EditarCarro', {
+            state: { id: id }
+        })
     }
 
     return (
@@ -105,6 +111,9 @@ export default function ListaCarros() {
                             <th>
                                 Cliente:
                             </th>
+                            <th>
+                                Ações:
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -121,6 +130,11 @@ export default function ListaCarros() {
                                 </td>
                                 <td>
                                     {carro.proprietario.usuario.nome}
+                                </td>
+                                <td>
+                                    <Button variant="primary" onClick={() => {
+                                        editarCarro(carro.id)
+                                    }}>Editar</Button>
                                 </td>
                             </tr>
                         )}
