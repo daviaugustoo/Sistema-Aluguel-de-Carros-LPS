@@ -2,49 +2,37 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Nav from 'react-bootstrap/Nav';
-import { Row, Col, Button, ButtonGroup, ToggleButton } from 'react-bootstrap';
-import carro from './imagens/300px-Chick_Hicks.jpeg'
+import { Row, Col, Button, ButtonGroup, ToggleButton, Navbar } from 'react-bootstrap';
 import bambobi from './imagens/bumbobi.jpg'
 import ListaCarros from './pages/ListaCarros';
 import ListaClientes from './pages/ListaClientes';
+import Home from './pages/Home';
+import EditarCarro from './pages/EditarCarro';
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import NavBar from './components/NavBar';
+import NovoCarro from './pages/NovoCarro';
+import NovoCliente from './pages/NovoCliente';
 
 function App() {
 
   const [componente, setComponente] = useState<String>("")
-
-  const opcoes = [
-    "Lista de Carros",
-    "Clientes"
-  ]
-
-  function mostraComponente() {
-    if (componente == "Lista de Carros") {
-      return (<ListaCarros />)
-    } else if (componente == "Clientes") {
-      return (<ListaClientes />)
-    }
-  }
+  const navegar = useNavigate()
 
 
   return (
-    <Row>
-      <Col lg="3" style={{ backgroundColor: "gray" }} >
-        <Row >
-          < img src={carro} style={{ maxHeight: "150px" }} className='mb-2'></img>
-          {opcoes.map((opcao, idx) => (
-            <Button
-              variant={"unknow"}
-              onClick={(e) => setComponente(opcao)}
-            >
-              {opcao}
-            </Button>
-          ))}
-        </Row>
-      </Col>
-      <Col style={{ backgroundImage: bambobi }}>
-        {mostraComponente()}
-      </Col>
-    </Row>
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        />
+        <Route path="/EditarCarro" element={<EditarCarro />} />
+        <Route path="/ListaCarros" element={<ListaCarros />} />
+        <Route path='/ListaClientes' element={<ListaClientes />} />
+        <Route path='/NovoCarro' element={<NovoCarro />} />
+        <Route path='/NovoCliente' element={<NovoCliente />} />
+      </Routes>
+    </>
   );
 }
 

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { Row, Col, Container, Table, Button } from "react-bootstrap"
-import { Route, useNavigate } from "react-router";
-import NovoCarro from "../components/NovoCarro";
+import { Route, useNavigate, createSearchParams } from "react-router";
+import NovoCarro from "./NovoCarro";
+import NavBar from "../components/NavBar";
 
 
 
@@ -74,76 +75,81 @@ export default function ListaCarros() {
     }, [usuario])
 
     function abreNovoCarro() {
-        return
-    }
 
-    function editarCarro(id: number) {
-        navegar('EditarCarro', {
-            state: { id: id }
-        })
     }
 
     return (
-        <Container>
-            <Row className="text-center mt-5">
-                <h2>Tabela de Carros</h2>
-            </Row>
+        <>
             <Row>
+                <NavBar />
                 <Col>
-                    <Button onClick={() => {
-                        abreNovoCarro()
-                    }}>Novo Carro</Button>
+                    <Row className="text-center mt-5">
+                        <h2>Tabela de Carros</h2>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Button onClick={() => {
+                                navegar({
+                                    pathname: "/NovoCarro",
+                                })
+                            }}>Novo Carro</Button>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Modelo:
+                                    </th>
+                                    <th>
+                                        Ano:
+                                    </th>
+                                    <th>
+                                        Marca:
+                                    </th>
+                                    <th>
+                                        Cliente:
+                                    </th>
+                                    <th>
+                                        Ações:
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {listaDeCarros?.map((carro) =>
+                                    <tr>
+                                        <td>
+                                            {carro.modelo}
+                                        </td>
+                                        <td>
+                                            {carro.ano}
+                                        </td>
+                                        <td>
+                                            {carro.marca}
+                                        </td>
+                                        <td>
+                                            {carro.proprietario.usuario.nome}
+                                        </td>
+                                        <td>
+                                            <Button variant="primary"
+                                                onClick={() => {
+                                                    navegar({
+                                                        pathname: "/EditarCarro",
+                                                        search: createSearchParams({
+                                                            Id: carro.id.toString()
+                                                        }).toString()
+                                                    })
+                                                }}> Editar</Button>
+                                        </td>
+                                    </tr>
+                                )}
+                            </tbody>
+                        </Table>
+                    </Row>
                 </Col>
             </Row>
-            <Row>
-                <Table>
-                    <thead>
-                        <tr>
-                            <th>
-                                Modelo:
-                            </th>
-                            <th>
-                                Ano:
-                            </th>
-                            <th>
-                                Marca:
-                            </th>
-                            <th>
-                                Cliente:
-                            </th>
-                            <th>
-                                Ações:
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {listaDeCarros?.map((carro) =>
-                            <tr>
-                                <td>
-                                    {carro.modelo}
-                                </td>
-                                <td>
-                                    {carro.ano}
-                                </td>
-                                <td>
-                                    {carro.marca}
-                                </td>
-                                <td>
-                                    {carro.proprietario.usuario.nome}
-                                </td>
-                                <td>
-                                    <Button variant="primary" onClick={() => {
-                                        editarCarro(carro.id)
-                                    }}>Editar</Button>
-                                </td>
-                            </tr>
-                        )}
-                    </tbody>
-                </Table>
-            </Row>
-            <Row>
-                <Col></Col>
-            </Row>
-        </Container>
+
+        </ >
     )
 }
