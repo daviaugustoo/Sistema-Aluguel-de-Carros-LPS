@@ -4,15 +4,15 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "usuarios")
-public class usuario{
+public class Usuario{
     @Id
     private Long id;
-    private string nome;
-    private string cpf;
-    private string rg;
-    private string endereco;
-    private string profissao;
-    private string entidadeEmpregadora;
+    private String nome;
+    private String cpf;
+    private String rg;
+    private String endereco;
+    private String profissao;
+    private String entidadeEmpregadora;
     private double rendimento;
 
     public Long getId(){
@@ -23,7 +23,7 @@ public class usuario{
         this.id = id;
     }
 
-    public string getNome(){
+    public String getNome(){
         return nome;
     }
 

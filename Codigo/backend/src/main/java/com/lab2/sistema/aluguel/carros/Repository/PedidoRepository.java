@@ -1,9 +1,9 @@
 package com.lab2.sistema.aluguel.carros.Repository;
 
-import com.lab2.sistema.aluguel.carros.models.Pedido;
+import com.lab2.sistema.aluguel.carros.Model.Pedido;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PedidoRepository extends MongoRepository<Pedido, String> {
+public interface PedidoRepository extends MongoRepository<Pedido, Long> {
 }

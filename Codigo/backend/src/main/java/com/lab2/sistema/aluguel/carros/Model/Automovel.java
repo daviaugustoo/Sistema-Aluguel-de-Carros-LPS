@@ -1,4 +1,4 @@
-package com.lab2.sistema.aluguel.carros;
+package com.lab2.sistema.aluguel.carros.Model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

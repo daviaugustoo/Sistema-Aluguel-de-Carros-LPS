@@ -1,6 +1,7 @@
 package com.lab2.sistema.aluguel.carros.Controller;
 
-import com.lab2.sistema.aluguel.carros.model.Agente;
+import com.lab2.sistema.aluguel.carros.Model.Agente;
+import com.lab2.sistema.aluguel.carros.Service.AgenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

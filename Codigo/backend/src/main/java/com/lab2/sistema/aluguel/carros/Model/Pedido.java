@@ -6,7 +6,8 @@ import java.util.Date;
 
 @Document(collection = "pedidos")
 public class Pedido{
-    @Idprivate long id;
+    @Id
+    private long id;
     private Cliente cliente;
     private Automovel automovel;
     private String status;

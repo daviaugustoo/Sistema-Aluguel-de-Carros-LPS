@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Cliente{
     @Id
     private Long id;
-    private Usuario usuario;
+    private com.lab2.sistema.aluguel.carros.Model.Usuario usuario;
 
     public void realizarPedido(Pedido pedido){
 
@@ -17,7 +17,7 @@ public class Cliente{
 
     }
 
-    public voi modificarPedido(Pedido pedido){
+    public void modificarPedido(Pedido pedido){
 
     }
 

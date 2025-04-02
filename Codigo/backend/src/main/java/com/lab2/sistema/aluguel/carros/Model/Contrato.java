@@ -6,7 +6,8 @@ import java.util.Date;
 
 @Document(collection = "contratos")
 public class Contrato{
-    @Idprivate Long id;
+    @Id
+    private Long id;
     private Pedido pedido;
     private Date Dateinicio;
     private Date DateFim;
